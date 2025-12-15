@@ -1,70 +1,84 @@
-// top-level imports required in Kotlin DSL
 import java.io.FileInputStream
 import java.util.Properties
 
 plugins {
     id("com.android.application")
-    // START: FlutterFire Configuration
-    id("com.google.gms.google-services")
-    // END: FlutterFire Configuration
+    id("com.google.gms.google-services") // Firebase
     id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-// Load keystore properties
-val keystorePropertiesFile = rootProject.file("key.properties")
+// --- BAGIAN 1: MEMUAT KUNCI DARI KEY.PROPERTIES ---
 val keystoreProperties = Properties()
+// Mencari file key.properties di folder android/
+val keystorePropertiesFile = rootProject.file("key.properties")
+
 if (keystorePropertiesFile.exists()) {
-    FileInputStream(keystorePropertiesFile).use {
-        keystoreProperties.load(it)
-    }
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 }
+// --------------------------------------------------
 
 android {
     namespace = "com.example.sikatu"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = "29.0.13113456"
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
+        jvmTarget = "1.8"
     }
 
-    signingConfigs {
-        create("release") {
-            keyAlias = keystoreProperties["keyAlias"] as? String
-            keyPassword = keystoreProperties["keyPassword"] as? String
-            // ensure storeFile is converted to String before calling file(...)
-            storeFile = (keystoreProperties["storeFile"] as? String)?.let { file(it) }
-            storePassword = keystoreProperties["storePassword"] as? String
-        }
+    sourceSets {
+        getByName("main").java.srcDirs("src/main/kotlin")
     }
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.sikatu"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
+        minSdk = flutter.minSdkVersion // Minimal untuk Firebase
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
+        multiDexEnabled = true
     }
 
+    // --- BAGIAN 2: KONFIGURASI SIGNING ---
+    signingConfigs {
+        create("release") {
+            // Mengambil nilai dari key.properties
+            keyAlias = keystoreProperties["keyAlias"] as String?
+            keyPassword = keystoreProperties["keyPassword"] as String?
+            storePassword = keystoreProperties["storePassword"] as String?
+
+            // Logika mencari file .jks
+            val storeFileName = keystoreProperties["storeFile"] as String?
+            if (storeFileName != null) {
+                storeFile = file(storeFileName)
+            }
+        }
+    }
+    // -------------------------------------
+
     buildTypes {
-        release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+        getByName("release") {
+            // Menggunakan konfigurasi 'release' yang dibuat di atas
             signingConfig = signingConfigs.getByName("release")
+            isMinifyEnabled = false
+            isShrinkResources = false
+        }
+        getByName("debug") {
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 }
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation("androidx.multidex:multidex:2.0.1")
 }
