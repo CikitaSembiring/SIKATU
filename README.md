@@ -20,7 +20,7 @@ Aplikasi ini bertujuan untuk meningkatkan produktivitas mahasiswa dengan menyedi
 
 ## 👥 Anggota Kelompok
 
-Aplikasi ini dikembangkan oleh tim mahasiswa **Universitas Sumatera Utara (USU)** sebagai pemenuhan tugas mata kuliah Pemrograman Mobile:
+Aplikasi ini dikembangkan oleh kelompok **SBD** sebagai pemenuhan tugas mata kuliah Pemrograman Mobile:
 
 | No | Nama Lengkap | NIM |
 | :--- | :--- | :--- |
