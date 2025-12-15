@@ -26,7 +26,7 @@ Aplikasi ini dikembangkan oleh kelompok **SBD** sebagai pemenuhan tugas mata kul
 | :--- | :--- | :--- |
 | 1 | **Dini Arya Putri** | 231401025 |
 | 2 | **Dame Theresia Rejeki Sidauruk** | 231401022 |
-| 3 | **Cikita Natasya Sembiring** | 2313010121 |
+| 3 | **Cikita Natasya Br Sembiring** | 231401121 |
 
 ---
 
