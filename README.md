@@ -1,16 +1,56 @@
-# sikatu
+# SIKATU (Sistem Kalender & Tugas)
 
-A new Flutter project.
+![Logo SIKATU](assets/images/sikatulogo.png)
 
-## Getting Started
+## 📱 Tentang Aplikasi
 
-This project is a starting point for a Flutter application.
+**SIKATU** adalah aplikasi manajemen tugas berbasis *mobile* yang dirancang khusus untuk membantu mahasiswa mengelola jadwal kuliah dan tugas akademik mereka dengan lebih terstruktur. 
 
-A few resources to get you started if this is your first Flutter project:
+Aplikasi ini bertujuan untuk meningkatkan produktivitas mahasiswa dengan menyediakan fitur pencatatan tugas yang terintegrasi dengan mata kuliah, pengingat tenggat waktu (*deadline*), serta visualisasi progres harian agar tidak ada tugas yang terlewat.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Fitur Utama
+* **Autentikasi Pengguna:** Login & Register aman menggunakan Email, Google, dan Facebook (Firebase Auth).
+* **Manajemen Tugas (CRUD):** Tambah, lihat, edit, dan hapus tugas kuliah dengan mudah.
+* **Manajemen Mata Kuliah:** Mengelompokkan tugas berdasarkan mata kuliah yang diambil.
+* **Dashboard Statistik:** Memantau progres penyelesaian tugas harian dan status tugas (Selesai/Belum).
+* **Kalender Akademik:** Tampilan kalender untuk melihat jadwal tugas mendatang.
+* **Notifikasi & Prioritas:** Menandai tugas berdasarkan prioritas (High, Medium, Low).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 👥 Anggota Kelompok
+
+Aplikasi ini dikembangkan oleh tim mahasiswa **Universitas Sumatera Utara (USU)** sebagai pemenuhan tugas mata kuliah Pemrograman Mobile:
+
+| No | Nama Lengkap | NIM |
+| :--- | :--- | :--- |
+| 1 | **Dini Arya Putri** | 231401025 |
+| 2 | **Dame Theresia Rejeki Sidauruk** | 231401022 |
+| 3 | **Cikita Natasya Sembiring** | 2313010121 |
+
+---
+
+## 🎨 Desain Prototipe (Figma)
+
+Rancangan antarmuka pengguna (UI/UX) aplikasi ini dibuat menggunakan Figma. Anda dapat melihat alur dan desain lengkapnya melalui tautan berikut:
+
+[[**Lihat Prototipe Figma SIKATU**](https://www.figma.com/design/DFn909tCh4HfmwJQSwdLj3/SIKATU?node-id=0-1&t=0iOEuv25WHHEOK3C-](https://www.figma.com/design/DFn909tCh4HfmwJQSwdLj3/SIKATU?node-id=0-1&t=0iOEuv25WHHEOK3C-1))
+
+---
+
+## 📥 Unduh Aplikasi (Rilis)
+
+Versi rilis terbaru (APK) yang siap diinstal pada perangkat Android dapat diunduh melalui halaman **Releases** di repository ini:
+
+[**Download SIKATU v1.0.0 (APK)**](../../releases)
+
+---
+
+### Cara Instalasi
+1. Download file `app-release.apk` dari link di atas.
+2. Buka file tersebut di HP Android Anda.
+3. Jika muncul peringatan keamanan, izinkan instalasi dari sumber tidak dikenal (*Install from unknown sources*).
+4. Aplikasi siap digunakan.
+
+---
+*Dibuat dengan ❤️ menggunakan Flutter & Firebase.*
