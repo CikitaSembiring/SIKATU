@@ -1,0 +1,67 @@
+name: sikatu
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.9.2 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Fonts
+  cupertino_icons: ^1.0.8
+  font_awesome_flutter: ^10.7.0
+  google_fonts: ^6.2.1
+
+  # Firebase & Auth
+  firebase_core: ^2.31.0
+  firebase_auth: ^4.19.4
+  google_sign_in: ^6.2.1
+  flutter_facebook_auth: ^6.1.1
+
+  # Database & Storage
+  cloud_firestore: ^4.17.2
+  firebase_storage: ^11.7.4
+
+  # Utilities
+  image_picker: ^1.1.2
+  country_picker: ^2.0.26
+  intl: ^0.19.0
+  shared_preferences: ^2.5.3
+
+# --- DEV DEPENDENCIES  ---
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.1
+
+# --- KONFIGURASI FLUTTER ---
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+
+# --- KONFIGURASI ICON  ---
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/sikatulogo.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/sikatulogo.png"
+
+# --- KONFIGURASI SPLASH SCREEN ---
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: "assets/images/sikatulogo.png"
+  android_12:
+    image: "assets/images/sikatulogo.png"
+    color: "#FFFFFF"
+    icon_background_color: "#FFFFFF"

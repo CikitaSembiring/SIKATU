@@ -1,0 +1,69 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 1. Izinkan Internet -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:label="sikatu"
+        android:name="${applicationName}"
+        android:icon="@mipmap/launcher_icon">
+
+        <!-- Activity Utama Anda (Jangan Diubah) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme"
+                />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--
+        =========================================================
+        == 2. TAMBAHKAN SEMUA KODE DI BAWAH INI
+        =========================================================
+        -->
+
+        <!-- ID Aplikasi dari strings.xml (Sudah benar) -->
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <!-- GANTI [YOUR_FB_CLIENT_TOKEN] dengan Token Klien Anda -->
+        <meta-data android:name="com.facebook.sdk.ClientToken"
+            android:value="5b3cff1d0459af36b79745df2cbb48cf"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <!-- =============================================
+        == BATAS AKHIR KODE TAMBAHAN
+        =============================================
+        -->
+
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+    </application>
+</manifest>
+

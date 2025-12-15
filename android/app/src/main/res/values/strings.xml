@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    =========================================================
+    == 1. TAMBAHKAN BARIS INI (YANG HILANG)
+    =========================================================
+    -->
+    <string name="app_name">SIKATU</string>
+
+    <!--
+    =========================================================
+    == 2. STRING FACEBOOK ANDA (YANG SUDAH ADA)
+    =========================================================
+    -->
+    <string name="facebook_app_id">715356490907682</string>
+    <string name="fb_login_protocol_scheme">fb715356490907682</string>
+</resources>
+
