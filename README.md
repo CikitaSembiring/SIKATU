@@ -42,7 +42,7 @@ Rancangan antarmuka pengguna (UI/UX) aplikasi ini dibuat menggunakan Figma. Anda
 
 Versi rilis terbaru (APK) yang siap diinstal pada perangkat Android dapat diunduh melalui halaman **Releases** di repository ini:
 
-[**Download SIKATU v1.0.7 (APK)**](sha256:4cf3f4730793872414246ec2a3cb1cd6b34c3f71dd41fe05e53cb8b435031eeb)
+[**Download SIKATU v1.0.7 (APK)**]([sha256:4cf3f4730793872414246ec2a3cb1cd6b34c3f71dd41fe05e53cb8b435031eeb](https://github.com/CikitaSembiring/SIKATU/releases))
 
 ---
 
