@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-      - master
-      - feature/manual-http-implementation
     tags:
       - 'v*'
   workflow_dispatch:
@@ -33,22 +31,18 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Accept Android SDK licenses
-        run: yes | sdkmanager --licenses || true
-
-      - name: Install NDK
-        run: sdkmanager --install "ndk;29.0.13113456"
-
+      # --- PERBAIKAN: Gunakan channel stable agar versi valid ---
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.27.1'
           channel: 'stable'
           cache: true
+      # --------------------------------------------------------
 
       - name: Install Dependencies
         run: flutter pub get
 
+      # --- Pastikan Secrets sudah diset di GitHub Settings ---
       - name: Decode Keystore
         env:
           KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
@@ -61,12 +55,10 @@ jobs:
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
         run: |
-          cat > android/key.properties << EOF
-          storePassword=$STORE_PASSWORD
-          keyPassword=$KEY_PASSWORD
-          keyAlias=$KEY_ALIAS
-          storeFile=upload-keystore.jks
-          EOF
+          echo "storePassword=$STORE_PASSWORD" > android/key.properties
+          echo "keyPassword=$KEY_PASSWORD" >> android/key.properties
+          echo "keyAlias=$KEY_ALIAS" >> android/key.properties
+          echo "storeFile=../app/upload-keystore.jks" >> android/key.properties
 
       - name: Decode google-services.json
         env:
@@ -86,7 +78,7 @@ jobs:
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: anime-verse-${{ steps.get_version.outputs.version }}
+          name: app-release
           path: build/app/outputs/flutter-apk/app-release.apk
 
   release:
@@ -102,7 +94,7 @@ jobs:
       - name: Download APK
         uses: actions/download-artifact@v4
         with:
-          name: anime-verse-${{ needs.build.outputs.version }}
+          name: app-release
           path: ./
 
       - name: Create Release
@@ -110,19 +102,9 @@ jobs:
         with:
           files: app-release.apk
           body: |
-            ## Anime Verse v${{ needs.build.outputs.version }}
+            ## Rilis Baru v${{ needs.build.outputs.version }}
             
-            ### 📱 Download
-            Download the APK below and install on your Android device.
-            
-            ### ✨ What's New
-            - Automated build via GitHub Actions
-            - Release signed with production keystore
-            
-            ### 🔒 Security
-            - Signed with release keystore
-            - Firebase configured for production
-            - Firestore security rules enabled
+            Silakan unduh file APK di bawah ini.
           draft: false
           prerelease: false
         env:
