@@ -34,7 +34,7 @@ Aplikasi ini dikembangkan oleh kelompok **SBD** sebagai pemenuhan tugas mata kul
 
 Rancangan antarmuka pengguna (UI/UX) aplikasi ini dibuat menggunakan Figma. Anda dapat melihat alur dan desain lengkapnya melalui tautan berikut:
 
-[[**Lihat Prototipe Figma SIKATU**](https://www.figma.com/design/DFn909tCh4HfmwJQSwdLj3/SIKATU?node-id=0-1&t=0iOEuv25WHHEOK3C-](https://www.figma.com/design/DFn909tCh4HfmwJQSwdLj3/SIKATU?node-id=0-1&t=0iOEuv25WHHEOK3C-1))
+[[**Lihat Prototipe Figma SIKATU**](https://www.figma.com/design/DFn909tCh4HfmwJQSwdLj3/SIKATU?node-id=0-1&t=0iOEuv25WHHEOK3C-](https://www.figma.com/design/DFn909tCh4HfmwJQSwdLj3/SIKATU?node-id=0-1&t=0iOEuv25WHHEOK3C-1)
 
 ---
 
@@ -42,7 +42,7 @@ Rancangan antarmuka pengguna (UI/UX) aplikasi ini dibuat menggunakan Figma. Anda
 
 Versi rilis terbaru (APK) yang siap diinstal pada perangkat Android dapat diunduh melalui halaman **Releases** di repository ini:
 
-[**Download SIKATU v1.0.7 (APK)**]([sha256:4cf3f4730793872414246ec2a3cb1cd6b34c3f71dd41fe05e53cb8b435031eeb](https://github.com/CikitaSembiring/SIKATU/releases))
+[**Download SIKATU v1.0.7 (APK)**](sha256:4cf3f4730793872414246ec2a3cb1cd6b34c3f71dd41fe05e53cb8b435031eeb](https://github.com/CikitaSembiring/SIKATU/releases)
 
 ---
 
