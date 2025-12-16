@@ -1,4 +1,4 @@
-# SIKATU (Sistem Kalender & Tugas)
+# SIKATU (Sistem Katalog & Tugas Kuliah)
 
 ![Logo SIKATU](assets/images/sikatulogo.png)
 
