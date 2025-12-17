@@ -34,7 +34,7 @@ Aplikasi ini dikembangkan oleh kelompok **SBD** sebagai pemenuhan tugas mata kul
 
 Rancangan antarmuka pengguna (UI/UX) aplikasi ini dibuat menggunakan Figma. Anda dapat melihat alur dan desain lengkapnya melalui tautan berikut:
 
-[[**Lihat Prototipe Figma SIKATU**](https://www.figma.com/design/DFn909tCh4HfmwJQSwdLj3/SIKATU?node-id=0-1&t=0iOEuv25WHHEOK3C-](https://www.figma.com/design/DFn909tCh4HfmwJQSwdLj3/SIKATU?node-id=0-1&t=0iOEuv25WHHEOK3C-1)
+[[**Lihat Prototipe Figma SIKATU**](https://www.figma.com/design/DFn909tCh4HfmwJQSwdLj3/SIKATU?node-id=0-1&t=0iOEuv25WHHEOK3C-1)
 [[**Lihat Dokumen SRS SIKATU**](https://drive.google.com/file/d/1xl073H11tmx0YpNJOaDqumKArQfbf3Ow/view?usp=drivesdk)
 
 ---
